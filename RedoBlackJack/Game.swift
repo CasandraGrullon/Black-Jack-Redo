@@ -30,7 +30,16 @@ class Game {
     func stopHits(userResponse: String) {
         if userResponse == "pass" {
             print("computer score: \(computerVPlayer())")
+            if computerVPlayer() > player.score {
             print("Your score was lower! You lost!")
+                print("Your score: \(player.score)")
+            } else if computerVPlayer() < player.score {
+                print("Your score was higher! You won!")
+                print("Your score: \(player.score)")
+            } else {
+                print("Its a tie!")
+            }
+            
             gameOver = true
         }
         
