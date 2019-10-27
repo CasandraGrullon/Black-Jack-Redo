@@ -30,6 +30,8 @@ class Game {
     func stopHits(userResponse: String) {
         if userResponse == "pass" {
             print("computer score: \(computerVPlayer())")
+            print("Your score was lower! You lost!")
+            gameOver = true
         }
         
     }
